@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid white;
+  border-radius:0.5rem;
+  width: 500px;
+  height: 500px;
+}
+
+.grid-item {
+  border:1px solid white;
+  border-radius:0.5rem;
+}
