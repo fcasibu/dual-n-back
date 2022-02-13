@@ -24,7 +24,8 @@ Dual-N-Back is a brain training game that supposedly trains the working memory. 
 ![](dual-2-back.png)
 ![](dual-3-back.png)
 
-- How you match the position or color depends on the (n)-back
+- How you match the position or color depends on the (n)-back  
+  
   Like in the example above in Dual-2-Back. The
   first grid has a square on the 3rd cell, the second grid has a square on the 4th cell which is wrong, on the third grid, the square is on the 3rd cell again which matches.
 
