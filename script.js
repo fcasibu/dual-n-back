@@ -22,6 +22,7 @@ function createButtons() {
     button.classList.add("button");
     buttonContainerTop.appendChild(button);
   }
+
   buttonContainerTop.children[0].setAttribute("data-button", "speed-trial");
   buttonContainerTop.children[1].setAttribute("data-button", "ncount");
   buttonContainerTop.children[2].setAttribute("data-button", "start");
@@ -229,6 +230,7 @@ function checkColor(e) {
 
 window.addEventListener("keydown", (e) => {
   const key = document.querySelector(`button[data-key="${e.key}"]`);
+  if (e.repeat) return;
   if (e.key === "Escape") {
     adjustNCount.classList.remove("adjust-ncount-show");
     adjustSpeedTrial.classList.remove("adjust-speed-trial-show");
