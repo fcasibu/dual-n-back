@@ -4,12 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
-    <div class="container"></div>
-    <button class="test">click me</button>
+    <h1 class="title">Dual-<span class="n-count">n</span>-back</h1>
+    <div class="container">
+      <div class="scores">
+        <div>Position: <span class="position">0</span></div>
+        <div>Color: <span class="color">0</span></div>
+      </div>
+      <div class="grid-container"></div>
+    </div>
+    <div class="adjust-speed-trial">
+      <div>
+        <label for="speed"
+          >Speed in seconds (<strong>How long for the color to show</strong>)</label
+        >
+        <input type="number" id="speed" />
+        <label for="trial">Trial count (<strong>How many trials</strong>)</label>
+        <input type="number" id="trial" />
+        <div>
+          <button class="button button-confirm speed-trial">Confirm</button>
+        </div>
+      </div>
+    </div>
+    <div class="adjust-ncount">
+      <div>
+        <label for="n-count-number">Dual-(n)-Back</label>
+        <input type="number" id="n-count-number" />
+        <div>
+          <button class="button button-confirm ncount">Confirm</button>
+          <span class="ncount-error">Only input 1 - 9</span>
+        </div>
+      </div>
+    </div>
+    <div class="error-box">
+      <h2>Please adjust the N back</h2>
+    </div>
+    <div class="help-box">
+      <h2>How to play</h2>
+      <div class="content">
+        <div class="left">
+          <img src="dual-2-back.png" alt="" />
+          <img src="dual-3-back.png" alt="" />
+        </div>
+        <div class="right">
+          <p>Press A or click the position button if the position matches</p>
+          <p>Press D or click the color button if the color matches</p>
+          <p>
+            The counter for position and color changes to green and increases by one if you got it
+            right
+          </p>
+          <p>It changes to red if you got it wrong</p>
+          <p>
+            It changes to blue if you didn't press any button but the previous position or color
+            matches the current
+          </p>
+          <button class="button button-confirm help">Lets play!</button>
+        </div>
+      </div>
+    </div>
+    <div class="theme">
+      <input type="checkbox" name="checkbox" id="toggle-theme" />
+      <label for="toggle-theme" class="toggle-switch">
+        <i class="bi bi-sun-fill sun-icon"></i>
+        <i class="bi bi-moon-stars-fill moon-icon"></i>
+      </label>
+    </div>
+    <div class="end-screen">
+      <h2>Score</h2>
+      <div class="end-content">
+        <div class="left">
+          <h3>Position</h3>
+          <p>
+            Correct
+            <strong>
+              <span class="score-position"></span> -
+              <span class="total-position-score"></span>
+            </strong>
+            Wrong
+          </p>
+          <h3>Color</h3>
+          <p>
+            Correct
+            <strong
+              ><span class="score-color"></span> - <span class="total-color-score"></span
+            ></strong>
+            Wrong
+          </p>
+        </div>
+        <div class="right">
+          <h3>Total %</h3>
+          <h3 class="total-percent"></h3>
+        </div>
+      </div>
+      <button class="button button-confirm end">Go back</button>
+    </div>
   </body>
 </html>
